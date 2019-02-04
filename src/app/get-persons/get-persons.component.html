@@ -1,0 +1,17 @@
+<div class="container">
+  <div [hidden]="submitted">
+    <h1>Get Person By Id</h1>
+    <form (ngSubmit)="getPersonById(id.value)" #hero1Form="ngForm">
+      <div class="form-group">
+        <label for="name">Enter Person Id</label>
+        <input type="text" class="form-control"
+               [(ngModel)]="model.id" name="id" #id>
+      </div>
+     <button type="submit" class="btn btn-success">Submit</button>    
+        
+        
+
+    <h1>Get All Persons</h1>
+    <form (ngSubmit)="getAllPersons()" #hero2Form="ngForm">
+      <button type="submit" class="btn btn-success">Get All Persons</button>
+     

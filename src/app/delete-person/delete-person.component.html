@@ -1,0 +1,10 @@
+<div class="container">
+  <div [hidden]="submitted">
+    <h1>Delete Person By Id</h1>
+    <form (ngSubmit)="deletePersonById(id.value)" #hero1Form="ngForm">
+      <div class="form-group">
+        <label for="name">Enter PersonId to Delete</label>
+        <input type="text" class="form-control"
+               [(ngModel)]="model.id" name="id" #id>
+      </div>
+     <button type="submit" class="btn btn-success">Delete Person</button> 
