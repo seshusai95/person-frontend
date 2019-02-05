@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Http, Response } from '@angular/http';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'delete-person',
@@ -8,10 +9,12 @@ import { Http, Response } from '@angular/http';
 })
 export class DeletePersonComponent implements OnInit {
 
+ personId: any=189;
+
  title = 'Delete a Person';
  private apiUrl = 'http://localhost:8080/persons';
   
-  constructor(private http: Http){ }
+  constructor(private http: Http, private router: Router){ }
 
   ngOnInit() { }
 
@@ -27,7 +30,14 @@ export class DeletePersonComponent implements OnInit {
        console.log("Error occured in deletePersonById");
        }
        );
+       
+       this.gotoGetAllPersons();
   
   }
+  
+  gotoGetAllPersons(){
+   this.router.navigate(['/getallpersons']);
+}
+
 
 }

@@ -5,6 +5,7 @@
       <div class="form-group">
         <label for="name">Enter PersonId to Delete</label>
         <input type="text" class="form-control"
-               [(ngModel)]="model.id" name="id" #id>
+               required
+              [(ngModel)]="personId" name="personId" value="personId" #id>
       </div>
-     <button type="submit" class="btn btn-success">Delete Person</button> 
+     <button type="submit" class="btn btn-success" [disabled]=hero1Form.invalid>Delete Person</button> 

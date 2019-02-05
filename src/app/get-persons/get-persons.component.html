@@ -1,17 +1,17 @@
 <div class="container">
-  <div [hidden]="submitted">
-    <h1>Get Person By Id</h1>
-    <form (ngSubmit)="getPersonById(id.value)" #hero1Form="ngForm">
-      <div class="form-group">
-        <label for="name">Enter Person Id</label>
-        <input type="text" class="form-control"
-               [(ngModel)]="model.id" name="id" #id>
-      </div>
-     <button type="submit" class="btn btn-success">Submit</button>    
-        
-        
-
+  <div [hidden]="submitted">     
     <h1>Get All Persons</h1>
     <form (ngSubmit)="getAllPersons()" #hero2Form="ngForm">
       <button type="submit" class="btn btn-success">Get All Persons</button>
-     
+      
+    <div class="card">
+        <ng-container *ngFor="let person of finalObtainedData">
+          <div class="contact-details">
+        <h2>Id: {{person.id}}</h2>
+        <h1>Name: {{person.name}}</h1>    
+        <h4>Age: {{person.age}}</h4>
+        <h4>City: {{person.city}}</h4>
+        <h4>Phone: {{person.phone}}</h4>   
+        </div>
+        </ng-container>
+        </div>

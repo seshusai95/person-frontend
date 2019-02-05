@@ -1,5 +1,28 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
-<insert-person></insert-person>
-<get-persons></get-persons>
-<delete-person></delete-person>
+
+<div class="" style="max-height: 70px">
+    <div class = "row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-8" style="left: 60px">
+            <h1 style="color:#1B5196;font-size: 300%" class="text-primary">Person Client</h1>
+        </div>
+ </div>
+</div>
+        <hr>
+
+<div class="container">
+    <div class="row">
+        <ul class="nav nav-pills">
+        <li routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}"><a routerLink="/">Insert Person</a></li>
+        <li routerLinkActive="active"><a routerLink="/getpersonbyid">Get Person By Id</a></li>
+        <li routerLinkActive="active"><a routerLink="/getallpersons">Get All Persons</a></li>
+        <li routerLinkActive="active"><a routerLink="/updateperson">Update Person</a></li>
+        <li routerLinkActive="active"><a routerLink="/deleteperson">Delete Person</a></li>
+        </ul>
+    </div>
+</div>
+<div class="">
+    <router-outlet></router-outlet>
+</div>

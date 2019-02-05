@@ -1,31 +1,34 @@
 <div class="container">
   <div [hidden]="submitted">
     <h1>Insert Person</h1>
-    <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+    <form (ngSubmit)="insertPeron()" #heroForm="ngForm">
       <div class="form-group">
         <label for="name">Name</label>
         <input type="text" class="form-control"
-               [(ngModel)]="model.name" name="name">
+               required
+               [(ngModel)]="model.name" name="name" #name>
       </div>
-
+        
        <div class="form-group">
         <label for="age">Age</label>
         <input type="text" class="form-control"
-               [(ngModel)]="model.age" name="age">
+               required
+               [(ngModel)]="model.age" name="age" #age>
       </div>
 
       <div class="form-group">
         <label for="city">City</label>
         <input type="text" class="form-control"
-       
-               [(ngModel)]="model.city" name="city">
+               required
+               [(ngModel)]="model.city" name="city" #city>
       </div>
 
       <div class="form-group">
         <label for="phone">Phone</label>
         <input type="text" class="form-control"
-               [(ngModel)]="model.phone" name="phone">
+               required
+               [(ngModel)]="model.phone" name="phone" #phone>
       </div>
-      <button type="submit" class="btn btn-success">Submit</button>
+      <button type="submit" class="btn btn-success" [disabled]=heroForm.invalid>Insert Person</button>
      
       
